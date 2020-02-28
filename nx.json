@@ -1,0 +1,22 @@
+{
+  "npmScope": "acme-corp",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "bookhop": {
+      "tags": []
+    },
+    "bookhop-e2e": {
+      "tags": [],
+      "implicitDependencies": ["bookhop"]
+    }
+  }
+}
