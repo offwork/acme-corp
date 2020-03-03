@@ -17,6 +17,9 @@
     "bookhop-e2e": {
       "tags": [],
       "implicitDependencies": ["bookhop"]
+    },
+    "ui": {
+      "tags": ["scope:shared", "type:ui"]
     }
   }
 }

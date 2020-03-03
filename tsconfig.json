@@ -3,6 +3,9 @@
   "compilerOptions": {
     "rootDir": ".",
     "sourceMap": true,
+    "allowJs": true,
+    "noEmit": true,
+    "checkJs": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -15,7 +18,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@acme-corp/ui": ["libs/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
