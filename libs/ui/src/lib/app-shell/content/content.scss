@@ -1,0 +1,36 @@
+.item {
+  width: 100%;
+  height: auto;
+  flex-basis: 260px;
+  flex-grow: 1;
+  overflow: hidden;
+
+  .image {
+    max-width: 100%;
+    margin: 16px 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .more {
+    margin-top: 16px;
+    float: right;
+  }
+
+  .truncate {
+    display: -webkit-box;
+    height: 44px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    &:before {
+      content: '';
+    }
+    &:after {
+      content: '...';
+    }
+  }
+}

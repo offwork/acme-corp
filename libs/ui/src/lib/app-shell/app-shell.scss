@@ -1,0 +1,13 @@
+.app-shell {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding-top: 78px;
+  }
+}
