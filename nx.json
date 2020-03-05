@@ -11,12 +11,12 @@
     "nx.json": "*"
   },
   "projects": {
-    "bookhop": {
+    "bookshop": {
       "tags": []
     },
     "bookshop-e2e": {
       "tags": [],
-      "implicitDependencies": ["bookhop"]
+      "implicitDependencies": ["bookshop"]
     }
   }
 }
