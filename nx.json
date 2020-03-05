@@ -14,7 +14,7 @@
     "bookhop": {
       "tags": []
     },
-    "bookhop-e2e": {
+    "bookshop-e2e": {
       "tags": [],
       "implicitDependencies": ["bookhop"]
     }

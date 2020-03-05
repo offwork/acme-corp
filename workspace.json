@@ -81,16 +81,16 @@
         }
       }
     },
-    "bookhop-e2e": {
-      "root": "apps/bookhop-e2e",
-      "sourceRoot": "apps/bookhop-e2e/src",
+    "bookshop-e2e": {
+      "root": "apps/bookshop-e2e",
+      "sourceRoot": "apps/bookshop-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/bookhop-e2e/cypress.json",
-            "tsConfig": "apps/bookhop-e2e/tsconfig.e2e.json",
+            "cypressConfig": "apps/bookshop-e2e/cypress.json",
+            "tsConfig": "apps/bookshop-e2e/tsconfig.e2e.json",
             "devServerTarget": "bookhop:serve"
           },
           "configurations": {
@@ -103,9 +103,9 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "apps/bookhop-e2e/.eslintrc",
-            "tsConfig": ["apps/bookhop-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/bookhop-e2e/**"]
+            "config": "apps/bookshop-e2e/.eslintrc",
+            "tsConfig": ["apps/bookshop-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/bookshop-e2e/**"]
           }
         }
       }
