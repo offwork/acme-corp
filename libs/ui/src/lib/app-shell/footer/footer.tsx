@@ -6,13 +6,11 @@ import './footer.scss';
 /* eslint-disable-next-line */
 export interface FooterProps {}
 
-export const Footer: FC<FooterProps & { className: string }> = ({className}) => {
+export const Footer: FC<FooterProps> = () => {
   return (
-    <div className={className}>
-      <Pane background="tint1" padding={24} display="flex">
-        <Text margin='auto'>&copy; Copyright 2020 Bookshop.com • All Rights Reserved Atez&trade;</Text>
-      </Pane>
-    </div>
+    <Pane background="tint1" padding={24} display="flex">
+      <Text margin='auto'>&copy; Copyright 2020 Bookshop.com • All Rights Reserved Atez&trade;</Text>
+    </Pane>
   );
 };
 
