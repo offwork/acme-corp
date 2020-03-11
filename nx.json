@@ -17,6 +17,12 @@
     "bookshop-e2e": {
       "tags": [],
       "implicitDependencies": ["bookshop"]
+    },
+    "ui": {
+      "tags": ["scope:shared", "type:ui"]
+    },
+    "books-feature": {
+      "tags": ["scope:shared", "type:feature"]
     }
   }
 }
