@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 import { Heading, Text } from 'evergreen-ui';
 import { parse } from 'querystring';
+import { BooksFeature } from '@acme-corp/books/feature';
 
 const Books = () => <div>
   <Heading is="h1">Books content is here!!</Heading>
@@ -133,7 +134,7 @@ export const AppRouting = (props: AppRoutingProps) => {
   return (
     <div>
       <Switch>
-        <Route path="/" exact component={Redirecting(Books)} />
+        <Route path="/" exact component={Redirecting(BooksFeature)} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/cart" component={Cart} />

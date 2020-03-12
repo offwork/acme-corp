@@ -19,7 +19,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@acme-corp/ui": ["libs/ui/src/index.ts"]
+      "@acme-corp/ui": ["libs/ui/src/index.ts"],
+      "@acme-corp/books/feature": ["libs/books/feature/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp", "dist"]
