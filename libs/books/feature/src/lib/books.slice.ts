@@ -1,10 +1,10 @@
 import {
   createSlice,
   createSelector,
-  Action,
   PayloadAction
 } from '@reduxjs/toolkit';
-import { ThunkAction } from 'redux-thunk';
+// in order to import, perhaps must be like `@app` :)
+import { AppThunk } from '../../../../../apps/bookshop/src/app/stores/store';
 
 export const BOOKS_FEATURE_KEY = 'books';
 
@@ -18,6 +18,11 @@ export type BooksError = any;
  */
 export interface BooksEntity {
   id: number;
+  title?: string
+  subtitle?: string
+  publish_date?: string
+  description?: string
+  image?: string
 }
 
 export interface BooksState {
@@ -103,20 +108,52 @@ export const selectBooksError = createSelector(
  * Export default effect, handled by redux-thunk.
  * You can replace this with your own effects solution.
  */
-export const fetchBooks = (): ThunkAction<
-  void,
-  any,
-  null,
-  Action<string>
-> => async dispatch => {
+export const fetchBooks = (): AppThunk => async dispatch => {
   try {
     dispatch(getBooksStart());
     // Replace this with your custom fetch call.
     // For example, `const data = await myApi.getBooks`;
     // Right now we just load an empty array.
-    const data = [];
+    const data = await fakeAPICall();
     dispatch(getBooksSuccess(data));
   } catch (err) {
     dispatch(getBooksFailure(err));
   }
 };
+
+
+function fakeAPICall(): Promise<BooksEntity[]> {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve([{
+        "id": 1,
+        "title": "Assistant Professor",
+        "subtitle": "FpML",
+        "publish_date": "01/07/2020",
+        "description": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+        "image": "https://semantic-ui.com/images/wireframe/image.png"
+      }, {
+        "id": 2,
+        "title": "Environmental Tech",
+        "subtitle": "Corel Draw",
+        "publish_date": "07/14/2019",
+        "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+        "image": "https://semantic-ui.com/images/wireframe/image.png"
+      }, {
+        "id": 3,
+        "title": "Operator",
+        "subtitle": "Environmental Science",
+        "publish_date": "06/01/2019",
+        "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+        "image": "https://semantic-ui.com/images/wireframe/image.png"
+      }, {
+        "id": 4,
+        "title": "Pharmacist",
+        "subtitle": "CA Unicenter NSM",
+        "publish_date": "07/23/2019",
+        "description": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+        "image": "https://semantic-ui.com/images/wireframe/image.png"
+      }])
+    }, 2000);
+  });
+}
