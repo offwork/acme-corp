@@ -23,6 +23,9 @@
     },
     "books-feature": {
       "tags": ["scope:shared", "type:feature"]
+    },
+    "books-data-access": {
+      "tags": []
     }
   }
 }
