@@ -5,8 +5,7 @@ import {
 } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Book, BooksResponse } from '@acme-corp/books/data-access';
-// in order to import, perhaps must be like `@app` :)
-import { AppThunk } from '../../../../../apps/bookshop/src/app/stores/store';
+import { AppThunk } from '@acme-corp/bookstore';
 
 export const BOOKS_FEATURE_KEY = 'books';
 
@@ -104,7 +103,9 @@ export const fetchBooks = (): AppThunk => async dispatch => {
     // Replace this with your custom fetch call.
     // For example, `const data = await myApi.getBooks`;
     // Right now we just load an empty array.
-    const data = await axios.get<BooksResponse>('https://www.googleapis.com/books/v1/volumes?q=categories:Art').then(response => response.data.items);
+    const data = await axios
+      .get<BooksResponse>('https://www.googleapis.com/books/v1/volumes?q=categories:Art')
+      .then(response => response.data.items);
     dispatch(getBooksSuccess(data));
   } catch (err) {
     dispatch(getBooksFailure(err));

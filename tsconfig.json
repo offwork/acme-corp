@@ -19,6 +19,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@acme-corp/bookstore": ["apps/bookshop/src/app/stores/index.ts"],
       "@acme-corp/ui": ["libs/ui/src/index.ts"],
       "@acme-corp/books/feature": ["libs/books/feature/src/index.ts"],
       "@acme-corp/books/data-access": ["libs/books/data-access/src/index.ts"]
