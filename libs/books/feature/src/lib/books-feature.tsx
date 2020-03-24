@@ -1,15 +1,20 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { getBooksStart, fetchBooks } from './books.slice';
-
+import {
+  getBooksStart,
+  fetchBooks,
+  selectBooksEntities,
+  selectBooksLoaded
+} from './books.slice';
+import BookList from './book-list';
 import './books-feature.scss';
 
-/* eslint-disable-next-line */
-export interface BooksFeatureProps {}
 
-export const BooksFeature = (props: BooksFeatureProps) => {
+export const BooksFeature = () => {
   const dispatch = useDispatch();
+  const entities = useSelector(selectBooksEntities);
+  const loaded = useSelector(selectBooksLoaded);
+
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);
@@ -19,10 +24,9 @@ export const BooksFeature = (props: BooksFeatureProps) => {
   };
 
   return (
-    <div>
-      <h1>Welcome to books-feature component!</h1>
-      <button onClick={showList}>Click</button>
-    </div>
+    <ul>
+      <BookList isLoading={loaded} list={entities} />
+    </ul>
   );
 };
 
