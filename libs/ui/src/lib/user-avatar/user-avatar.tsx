@@ -1,5 +1,4 @@
 import React from 'react';
-import { Avatar, Popover, Menu, Position } from 'evergreen-ui';
 
 import './user-avatar.scss';
 
@@ -7,25 +6,28 @@ import './user-avatar.scss';
 export interface UserAvatarProps {}
 
 export const UserAvatar = (props: UserAvatarProps) => {
+
   return (
-    <div>
-      <Popover position={Position.BOTTOM_RIGHT} content={
-        <Menu>
-          <Menu.Group>
-            <Menu.Item icon="user">Profile...</Menu.Item>
-            <Menu.Item icon="settings">Settings...</Menu.Item>
-            <Menu.Item icon="inbox">inbox...</Menu.Item>
-          </Menu.Group>
-          <Menu.Divider />
-          <Menu.Group>
-            <Menu.Item icon="help">Help...</Menu.Item>
-            <Menu.Item icon="log-out" intent="danger">Logout...</Menu.Item>
-          </Menu.Group>
-        </Menu>
-      }>
-        <Avatar className="avatar" isSolid name="Kerem Ozdemir" size={40} />
-      </Popover>
-    </div>
+    <ul className="navbar-nav">
+      <li className="nav-item dropdown">
+        <a className="nav-item dropdown"
+          href="#" id="navbarDropdownMenuLink"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          <img className="rounded-circle"
+            src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"
+            width="40"
+            height="40" />
+        </a>
+        <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+          <a className="dropdown-item" href="#">Dashboard</a>
+          <a className="dropdown-item" href="#">Edit Profile</a>
+          <a className="dropdown-item" href="#">Log Out</a>
+        </div>
+      </li>
+    </ul>
   );
 };
 

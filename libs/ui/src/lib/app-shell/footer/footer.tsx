@@ -1,6 +1,4 @@
 import React, { FC } from 'react';
-import { Pane, Text } from 'evergreen-ui';
-
 import './footer.scss';
 
 /* eslint-disable-next-line */
@@ -8,9 +6,7 @@ export interface FooterProps {}
 
 export const Footer: FC<FooterProps> = () => {
   return (
-    <Pane background="tint1" padding={24} display="flex">
-      <Text margin='auto'>&copy; Copyright 2020 Bookshop.com • All Rights Reserved Atez&trade;</Text>
-    </Pane>
+    <h4 className="footer_text">&copy; Copyright 2020 Bookshop.com • All Rights Reserved FuckingAtez&trade;</h4>
   );
 };
 

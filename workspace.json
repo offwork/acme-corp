@@ -19,7 +19,10 @@
               "apps/bookshop/src/favicon.ico",
               "apps/bookshop/src/assets"
             ],
-            "styles": ["apps/bookshop/src/styles.scss"],
+            "styles": [
+              "libs/ui/src/lib/ui.scss",
+              "apps/bookshop/src/styles.scss"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },

@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
-import { Heading, Text } from 'evergreen-ui';
 import { parse } from 'querystring';
 import { BooksFeature } from '@acme-corp/books/feature';
 
 const Books = () => <div>
-  <Heading is="h1">Books content is here!!</Heading>
-  <Text>1500'lerden beri kullanılan standart Lorem Ipsum pasajı "Lorem ipsum dolor sit amet, 
+  <h1 is="h1">Books content is here!!</h1>
+  <p>1500'lerden beri kullanılan standart Lorem Ipsum pasajı "Lorem ipsum dolor sit amet, 
     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
     velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Text>
-  <Text>M.Ö. 45 tarihinde Çiçero tarafından yazılan "de Finibus Bonorum et Malorum"un 1.10.32 
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+  <p>M.Ö. 45 tarihinde Çiçero tarafından yazılan "de Finibus Bonorum et Malorum"un 1.10.32 
     sayılı bölümü "Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
     accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
     veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam 
@@ -23,17 +22,17 @@ const Books = () => <div>
     veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex 
     ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
     esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas 
-    nulla pariatur?"</Text>
+    nulla pariatur?"</p>
 </div>;
 const BookDetails = () => <div>
-  <Heading is="h1">BookDetails content is here!!</Heading>
-  <Text>1500'lerden beri kullanılan standart Lorem Ipsum pasajı "Lorem ipsum dolor sit amet, 
+  <h1 is="h1">BookDetails content is here!!</h1>
+  <p>1500'lerden beri kullanılan standart Lorem Ipsum pasajı "Lorem ipsum dolor sit amet, 
     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
     velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Text>
-  <Text>M.Ö. 45 tarihinde Çiçero tarafından yazılan "de Finibus Bonorum et Malorum"un 1.10.32 
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+  <p>M.Ö. 45 tarihinde Çiçero tarafından yazılan "de Finibus Bonorum et Malorum"un 1.10.32 
     sayılı bölümü "Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
     accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
     veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam 
@@ -44,17 +43,17 @@ const BookDetails = () => <div>
     veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex 
     ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
     esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas 
-    nulla pariatur?"</Text>
+    nulla pariatur?"</p>
 </div>;
 const About = () => <div>
-  <Heading is="h1">Abouts content is here!!</Heading>
-  <Text>1500'lerden beri kullanılan standart Lorem Ipsum pasajı "Lorem ipsum dolor sit amet, 
+  <h1 is="h1">Abouts content is here!!</h1>
+  <p>1500'lerden beri kullanılan standart Lorem Ipsum pasajı "Lorem ipsum dolor sit amet, 
     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
     velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Text>
-  <Text>M.Ö. 45 tarihinde Çiçero tarafından yazılan "de Finibus Bonorum et Malorum"un 1.10.32 
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+  <p>M.Ö. 45 tarihinde Çiçero tarafından yazılan "de Finibus Bonorum et Malorum"un 1.10.32 
     sayılı bölümü "Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
     accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
     veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam 
@@ -65,17 +64,17 @@ const About = () => <div>
     veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex 
     ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
     esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas 
-    nulla pariatur?"</Text>
+    nulla pariatur?"</p>
 </div>;
 const Contact = () => <div>
-  <Heading is="h1">Contacts content is here!!</Heading>
-  <Text>1500'lerden beri kullanılan standart Lorem Ipsum pasajı "Lorem ipsum dolor sit amet, 
+  <h1 is="h1">Contacts content is here!!</h1>
+  <p>1500'lerden beri kullanılan standart Lorem Ipsum pasajı "Lorem ipsum dolor sit amet, 
     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
     velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Text>
-  <Text>M.Ö. 45 tarihinde Çiçero tarafından yazılan "de Finibus Bonorum et Malorum"un 1.10.32 
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+  <p>M.Ö. 45 tarihinde Çiçero tarafından yazılan "de Finibus Bonorum et Malorum"un 1.10.32 
     sayılı bölümü "Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
     accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
     veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam 
@@ -86,17 +85,17 @@ const Contact = () => <div>
     veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex 
     ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
     esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas 
-    nulla pariatur?"</Text>
+    nulla pariatur?"</p>
 </div>;
 const Cart = () => <div>
-  <Heading is="h1">Carts content is here!!</Heading>
-  <Text>1500'lerden beri kullanılan standart Lorem Ipsum pasajı "Lorem ipsum dolor sit amet, 
+  <h1 is="h1">Carts content is here!!</h1>
+  <p>1500'lerden beri kullanılan standart Lorem Ipsum pasajı "Lorem ipsum dolor sit amet, 
     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
     velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Text>
-  <Text>M.Ö. 45 tarihinde Çiçero tarafından yazılan "de Finibus Bonorum et Malorum"un 1.10.32 
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+  <p>M.Ö. 45 tarihinde Çiçero tarafından yazılan "de Finibus Bonorum et Malorum"un 1.10.32 
     sayılı bölümü "Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
     accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
     veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam 
@@ -107,10 +106,10 @@ const Cart = () => <div>
     veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex 
     ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
     esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas 
-    nulla pariatur?"</Text>
+    nulla pariatur?"</p>
 </div>;
 const NotFound = () => <div>
-  <Heading is="h1">Sorry, we couldn't find what you were looking for!!</Heading>
+  <h1 is="h1">Sorry, we couldn't find what you were looking for!!</h1>
 </div>;
 
 

@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Pane, Heading, Link, SearchInput } from 'evergreen-ui';
 import { UserAvatar } from '../../user-avatar/user-avatar';
 import './header.scss';
 
@@ -8,19 +7,36 @@ export interface HeaderProps {}
 
 export const Header:FC<HeaderProps> = () => {
   return (
-    <Pane display="flex" elevation={1}  alignItems="center" padding={16} background="#1557f2">
-      <Heading color="white">Bookshop</Heading>
-      <Pane display="flex" alignItems="center" marginLeft={48} width="100%">
-        <SearchInput placeholder="Filter traits..." width="100%" />
-        <div className="links">
-          <Link href="/" marginRight={12}>Books</Link>
-          <Link href="/about" marginRight={12}>About</Link>
-          <Link href="/contact" marginRight={12}>Contact</Link>
-          <Link href="/cart" marginRight={12}>Cart</Link>
-        </div>
-        <UserAvatar />
-      </Pane>
-    </Pane>
+    <nav className="navbar navbar-dark bg-primary navbar-expand-sm">
+      <a className="navbar-brand" href="#">
+        Bookshop
+      </a>
+      <button className="navbar-toggler"
+        type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <a className="nav-link" href="/">Books</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/about">About</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/contact">Contact</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/cart">Cart</a>
+          </li>
+        </ul>
+      </div>
+      <UserAvatar />
+    </nav>
   );
 };
 

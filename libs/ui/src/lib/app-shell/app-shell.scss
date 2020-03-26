@@ -1,3 +1,5 @@
+@import "../ui";
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -5,5 +7,12 @@
 
   .content {
     flex: auto;
+  }
+
+  .footer {
+    background-color: #f5f5f5;
+    display: flex;
+    width: 100%;
+    padding: 24px;
   }
 }

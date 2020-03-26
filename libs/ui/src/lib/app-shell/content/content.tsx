@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-import { Pane } from 'evergreen-ui';
 import './content.scss';
 
 /* eslint-disable-next-line */
@@ -9,9 +8,9 @@ export interface ContentProps {
 
 export const Content: FC<ContentProps> = ({ children }) => {
   return (
-    <Pane clearfix padding={24}>
+    <div className="content">
       {children}
-    </Pane>
+    </div>
   );
 };
 
