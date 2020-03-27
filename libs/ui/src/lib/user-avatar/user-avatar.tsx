@@ -1,33 +1,69 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import {
+  EuiAvatar,
+  EuiFlexGroup,
+  EuiFlexItem,
+  EuiHeaderSectionItemButton,
+  EuiLink,
+  EuiText,
+  EuiSpacer,
+  EuiPopover,
+} from '@elastic/eui';
 import './user-avatar.scss';
 
 /* eslint-disable-next-line */
 export interface UserAvatarProps {}
 
 export const UserAvatar = (props: UserAvatarProps) => {
+  const [ state, setState ] = useState(false);
+
+  const button = (
+    <EuiHeaderSectionItemButton
+      aria-controls="headerUserMenu"
+      aria-expanded={state}
+      aria-haspopup="true"
+      aria-label="Account menu"
+      onClick={() => setState(!state)}>
+      <EuiAvatar name="John Username" size="s" />
+    </EuiHeaderSectionItemButton>
+  );
 
   return (
-    <ul className="navbar-nav">
-      <li className="nav-item dropdown">
-        <a className="nav-item dropdown"
-          href="#" id="navbarDropdownMenuLink"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          <img className="rounded-circle"
-            src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"
-            width="40"
-            height="40" />
-        </a>
-        <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-          <a className="dropdown-item" href="#">Dashboard</a>
-          <a className="dropdown-item" href="#">Edit Profile</a>
-          <a className="dropdown-item" href="#">Log Out</a>
-        </div>
-      </li>
-    </ul>
+    <EuiPopover
+      id="headerUserMenu"
+      ownFocus
+      button={button}
+      isOpen={state}
+      anchorPosition="downRight"
+      closePopover={() => setState(false)}
+      panelPaddingSize="none">
+      <div style={{ width: 320 }}>
+        <EuiFlexGroup
+          gutterSize="m"
+          className="euiHeaderProfile"
+          responsive={false}>
+          <EuiFlexItem grow={false}>
+            <EuiAvatar name="Kerem Ozdemir" size="xl" />
+          </EuiFlexItem>
+          <EuiFlexItem>
+            <EuiText><p>Kerem Ozdemir</p></EuiText>
+            <EuiSpacer size="m" />
+            <EuiFlexGroup>
+              <EuiFlexItem>
+                <EuiFlexGroup justifyContent="spaceBetween">
+                  <EuiFlexItem grow={false}>
+                    <EuiLink href="">Edit profile</EuiLink>
+                  </EuiFlexItem>
+                  <EuiFlexItem grow={false}>
+                    <EuiLink href="">Log out</EuiLink>
+                  </EuiFlexItem>
+                </EuiFlexGroup>
+              </EuiFlexItem>
+            </EuiFlexGroup>
+          </EuiFlexItem>
+        </EuiFlexGroup>
+      </div>
+    </EuiPopover>
   );
 };
 
